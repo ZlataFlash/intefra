@@ -1,0 +1,18 @@
+.collection_images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+}
+
+.collection_image_text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 425px) {
+  .collection_images {
+    display: none;
+  }
+}

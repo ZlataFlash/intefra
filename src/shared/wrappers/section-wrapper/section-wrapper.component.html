@@ -1,0 +1,7 @@
+<section class=wrapper>
+  <h2 class=header>{{ title() }}</h2>
+  <ng-content></ng-content>
+  @if (more()) {
+    <p class=more>{{ more() }}</p>
+  }
+</section>

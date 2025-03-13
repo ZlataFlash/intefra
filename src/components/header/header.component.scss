@@ -1,0 +1,42 @@
+.banner {
+  display: flex;
+}
+
+.image_container {
+  position: relative;
+}
+
+.image {
+  max-width: 100%;
+  width: 100vw;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.image_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+}
+
+.image_title::after {
+  content: "";
+  display: flex;
+  border: 1px solid #fff;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 425px) {
+  .banner {
+    flex-direction: column;
+  }
+}

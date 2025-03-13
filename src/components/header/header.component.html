@@ -1,1 +1,29 @@
-<p>header works!</p>
+<header>
+  <app-navbar></app-navbar>
+  <section class="banner">
+    <div class="image_container">
+      <picture>
+        <source srcSet="/images/gender/male.png" media="(max-width: 425px)" />
+        <img
+          alt="gender"
+          src="/images/gender/male-desktop.png"
+          alt="male"
+          class="image"
+        />
+      </picture>
+      <h2 class="image_title">Мужское</h2>
+    </div>
+    <div class="image_container">
+      <picture>
+        <source srcSet="/images/gender/female.png" media="(max-width: 425px)" />
+        <img
+          alt="gender"
+          src="/images/gender/female-desktop.png"
+          alt="female"
+          class="image"
+        />
+      </picture>
+      <h2 class="image_title">Женское</h2>
+    </div>
+  </section>
+</header>

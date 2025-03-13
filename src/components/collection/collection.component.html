@@ -1,0 +1,37 @@
+<section class="collection">
+  <h2 class="collection_title">Коллекция</h2>
+  <div class="collection_images">
+    @for (image of images; let i = $index; track i) {
+      <div>
+        <div class="collection_image">
+          <img
+            [src]="image.src"
+            alt="collection"
+            width="380"
+            height="480"
+          />
+          <p class="collection_image_text">{{ image.description }}</p>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="slider_container">
+    <swiper-container
+      slides-per-view="1"
+      pagination="true"
+    >
+      @for (image of images; let i = $index; track i) {
+        <swiper-slide>
+          <div class="collection_image">
+            <img [src]="image.src" alt="slide" width="380" height="480" />
+            <p class="collection_image_text">
+              {{ image.description }}
+            </p>
+          </div>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+  <p class="collection_more">Смотреть больше</p>
+</section>

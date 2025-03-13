@@ -1,1 +1,9 @@
-<p>brands works!</p>
+<section class="brands_container">
+  <h2 class="brands_title">Топ-бренды</h2>
+  <div class="brands">
+    @for (image of brandsImages; let idx = $index; track idx) {
+      <img [src]=image width="170" alt="brand" />
+    }
+  </div>
+  <p class="all_brands">Все бренды</p>
+</section>

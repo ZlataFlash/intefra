@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.header {
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.more {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: flex;
+    width: 18%;
+    margin: 14px auto 0;
+    border: 1px solid #000;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .more::after {
+    width: 70%;
+  }
+}

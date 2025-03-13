@@ -1,0 +1,22 @@
+<div
+  [ngClass]='{ "slider_container": isOnlyMobile(), "slider_container_desc": !isOnlyMobile()}'
+>
+  <swiper-container
+    [attr.slides-per-view]="slidersView()"
+    pagination="true"
+  >
+    @for (image of images(); let i = $index; track i) {
+      <swiper-slide>
+        <div class="collection_image">
+          <img [src]="image.src" alt="slide" [width]="image.width ?? 380" [height]="image.height ?? 480" />
+          <p class="collection_image_text">
+            {{ image.description }}
+          </p>
+          @if (image.description) {
+
+          }
+        </div>
+      </swiper-slide>
+    }
+  </swiper-container>
+</div>
